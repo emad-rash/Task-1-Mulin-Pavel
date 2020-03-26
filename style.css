@@ -1,0 +1,134 @@
+.top-bar-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0px;
+  right: 0px;
+  min-height: 40px;
+  background: rgb(167,123,182);
+  font-style: italic;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery {
+  padding: .5vw; /*padding: .5vh # изменяется 1vh 1 % от ширины окна (высота, шрифт..)*/
+  display: flex;
+  flex: wrap;
+  flex-flow: row wrap;
+  padding: 0px;
+
+}
+
+.gallery div {
+  flex: auto;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex:auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery p {
+  position: absolute;
+  visibility: hidden;
+  color: rgba(255, 255, 255, 1);
+  margin: 0;
+  pointer-events: none;
+}
+
+.gallery:hover div:hover{
+  opacity: 0.5;
+  /*padding: 2px;*/
+  outline: 2px solid rgba(255,255,255,1); /* Пунктирная рамка */
+  outline-offset: -10px; /* Выводим рамку внутри элемента */
+  visibility: visible;
+}
+
+.gallery:hover div:hover p{
+  visibility: visible;
+}
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+  display:none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  /* z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  top: 15%;
+  left:25%;
+  min-width: 600px;
+  width: 50%; /* Full width */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(255,255,255); /* Fallback color */
+}
+
+.modal .image-cell {
+    min-width: 300px;
+    width: 30%; /* Ширина ячейки */
+   }
+
+
+/* Modal Content (Image) */
+.modal-content {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  display: block;
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  margin-left: 20px;
+  max-width: 700px;
+  color: rgb(0,0,0);
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: rgb(0,0,0);
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
