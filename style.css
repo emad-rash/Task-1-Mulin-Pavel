@@ -48,7 +48,7 @@
 }
 
 .gallery:hover div:hover{
-  opacity: 0.5;
+  opacity: 0.6;
   /*padding: 2px;*/
   outline: 2px solid rgba(255,255,255,1); /* Пунктирная рамка */
   outline-offset: -10px; /* Выводим рамку внутри элемента */
